@@ -14,7 +14,7 @@ const Register = () => {
         setError('');
 
         try {
-            const response = await axios.post('http://localhost:5000/api/register', {
+            const response = await axios.post('https://app-bakend.onrender.com/api/admin/register', {
                 username,
                 password,
             });
