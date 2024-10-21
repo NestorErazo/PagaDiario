@@ -20,7 +20,6 @@ const UserForm = () => {
 
         try {
             const response = await axios.post('https://app-bakend.onrender.com/api/user/register', {
-                                               
 
                 fullName,
                 email,
