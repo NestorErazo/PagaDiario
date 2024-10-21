@@ -19,7 +19,9 @@ const UserForm = () => {
         setSuccess('');
 
         try {
-            const response = await axios.post('https://app-bakend.onrender.com/api/user/user', {
+            const response = await axios.post('https://app-bakend.onrender.com/api/user/register', {
+                                               
+
                 fullName,
                 email,
                 identificationNumber,
@@ -52,7 +54,7 @@ const UserForm = () => {
             <h2>Crear Usuario</h2>
             <form onSubmit={handleSubmit} className="user-form">
                 <div className="form-group">
-                    <label htmlFor="fullName" >Nombre completo</label>
+                    <label htmlFor="fullName" >Nombre completo</label> <br/>
                     <input
                         type="text"
                         id="fullName"
