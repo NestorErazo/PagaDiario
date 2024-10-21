@@ -1,0 +1,41 @@
+/* src/components/Menu.css */
+
+.menu-container {
+    padding: 20px;
+    background-color: #f8f9fa; /* Fondo claro para el menú */
+}
+
+.navbar {
+    background-color: #007bff; /* Color de fondo azul para la barra de navegación */
+    padding: 15px; /* Aumenta el padding para una barra más alta */
+    border-radius: 5px;
+}
+
+.navbar ul {
+    list-style-type: none; /* Sin viñetas */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flex para que los elementos estén en línea */
+}
+
+.navbar li {
+    margin-right: 30px; /* Aumenta el espacio entre los elementos del menú */
+}
+
+.navbar li a {
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold;
+    font-size: 30px; /* Aumenta el tamaño de la fuente */
+    padding: 10px 15px; /* Añade padding para aumentar el área de clic */
+}
+
+/* Aumentar el tamaño de los íconos */
+.icon {
+    font-size: 35px; /* Cambia el tamaño de los íconos aquí */
+    margin-left: 8px; /* Espacio entre el texto y el ícono */
+}
+
+.navbar li a:hover {
+    text-decoration: underline; /* Subrayar al pasar el ratón */
+}
