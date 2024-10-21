@@ -19,7 +19,7 @@ const UserForm = () => {
         setSuccess('');
 
         try {
-            const response = await axios.post('http://localhost:5000/api/user', {
+            const response = await axios.post('https://app-bakend.onrender.com/api/user/user', {
                 fullName,
                 email,
                 identificationNumber,
