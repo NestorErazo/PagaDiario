@@ -1,3 +1,13 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css');
+
+/* Estilos específicos para CreditForm */
+.credit-form {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .credit-form-container {
   max-width: 600px; /* Máxima anchura del formulario */
   margin: 0 auto; /* Centra el formulario */
@@ -14,7 +24,7 @@ h2 {
 }
 
 .credit-form {
-  display: flexbox; /* Usa flexbox */
+  display: flex; /* Usa flexbox */
   flex-direction: column; /* Coloca los elementos en columna */
 }
 
@@ -32,6 +42,7 @@ label {
   font-size: 14px; /* Tamaño de fuente */
 }
 
+/* Detalles del usuario */
 .user-details {
   margin-top: 15px; /* Espaciado superior */
   padding: 10px; /* Espaciado interno */
@@ -53,4 +64,57 @@ label {
 
 .submit-button:hover {
   background-color: #45a049; /* Color al pasar el mouse */
+}
+
+/* Estilos responsivos */
+
+/* Para pantallas pequeñas (móviles) */
+@media only screen and (max-width: 600px) {
+  .credit-form-container {
+    max-width: 90%; /* Aumenta el ancho del formulario en móviles */
+    margin: 20px auto; /* Reduce el espacio superior/inferior */
+    padding: 20px; /* Reduce el padding interno */
+    border: 5px solid #ccc; /* Reduce el borde */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Reduce el tamaño de la fuente en móviles */
+    margin-bottom: 20px;
+  }
+
+  .select-user,
+  .input-field {
+    font-size: 14px; /* Tamaño de fuente para inputs */
+  }
+
+  .submit-button {
+    font-size: 14px; /* Reduce el tamaño del texto en el botón */
+  }
+}
+
+/* Para tabletas */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .credit-form-container {
+    max-width: 80%; /* Aumenta el ancho del formulario en tabletas */
+  }
+
+  h2 {
+    font-size: 1.8rem; /* Ajusta el tamaño de la fuente */
+  }
+
+  .select-user,
+  .input-field {
+    font-size: 15px; /* Ajusta el tamaño de la fuente */
+  }
+
+  .submit-button {
+    font-size: 15px; /* Ajusta el tamaño del texto */
+  }
+}
+
+/* Para pantallas grandes (monitores) */
+@media only screen and (min-width: 1025px) {
+  .credit-form-container {
+    max-width: 600px; /* Mantiene el ancho original para pantallas grandes */
+  }
 }

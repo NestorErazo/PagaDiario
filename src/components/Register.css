@@ -1,14 +1,17 @@
 .register-container {
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
+    max-width: 600px; /* Aumenta el ancho del formulario */
+    margin: 40px auto; /* Aumenta el espacio superior/inferior */
+    padding: 30px; /* Aumenta el padding interno */
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 0; /* Bordes rectos */
     background-color: #f9f9f9;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombras más grandes */
 }
 
 .register-container h2 {
     text-align: center;
+    font-size: 2rem; /* Aumenta el tamaño de la fuente */
+    margin-bottom: 30px;
 }
 
 .register-container form {
@@ -17,23 +20,33 @@
 }
 
 .register-container label {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 1.1rem; /* Aumenta el tamaño de los labels */
+    font-weight: bold;
 }
 
 .register-container input {
-    margin-bottom: 15px;
-    padding: 8px;
+    margin-bottom: 20px;
+    padding: 12px; /* Aumenta el padding para inputs más grandes */
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 0; /* Bordes rectos */
+    font-size: 1.2rem; /* Aumenta el tamaño del texto en los inputs */
+    transition: border-color 0.3s ease;
+}
+
+.register-container input:focus {
+    border-color: #007bff;
 }
 
 .register-container button {
-    padding: 10px;
+    padding: 14px; /* Botones más grandes */
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 0;
+    font-size: 1.2rem; /* Texto del botón más grande */
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .register-container button:hover {
@@ -43,9 +56,69 @@
 .success-message {
     color: green;
     text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 1.2rem; /* Mensaje más grande */
 }
 
 .error-message {
     color: red;
     text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 1.2rem; /* Mensaje más grande */
+}
+
+/* Estilos responsivos */
+
+/* Para pantallas pequeñas (móviles) */
+@media only screen and (max-width: 600px) {
+    .register-container {
+        max-width: 90%; /* Aumenta el ancho del formulario en móviles */
+        margin: 20px auto; /* Reduce el espacio superior/inferior */
+        padding: 20px; /* Reduce el padding interno */
+    }
+
+    .register-container h2 {
+        font-size: 1.5rem; /* Reduce el tamaño de la fuente en móviles */
+        margin-bottom: 20px;
+    }
+
+    .register-container label {
+        font-size: 1rem; /* Reduce el tamaño de los labels */
+    }
+
+    .register-container input {
+        font-size: 1rem; /* Reduce el tamaño del texto en los inputs */
+    }
+
+    .register-container button {
+        font-size: 1rem; /* Reduce el tamaño del texto en el botón */
+    }
+
+    .success-message, .error-message {
+        font-size: 1rem; /* Reduce el tamaño del mensaje */
+    }
+}
+
+/* Para tabletas */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .register-container {
+        max-width: 80%; /* Aumenta el ancho del formulario en tabletas */
+    }
+
+    .register-container h2 {
+        font-size: 1.8rem; /* Ajusta el tamaño de la fuente */
+    }
+
+    .register-container input, .register-container button {
+        font-size: 1.1rem; /* Ajusta el tamaño del texto */
+    }
+}
+
+/* Para pantallas grandes (monitores) */
+@media only screen and (min-width: 1025px) {
+    .register-container {
+        max-width: 600px; /* Mantiene el ancho original para pantallas grandes */
+    }
 }
