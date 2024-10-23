@@ -5,6 +5,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Menu from './components/Menu';
 import UserForm from './components/UserForm';
+import CreditForm from './components/CreditForm';
 
 const App = () => {
     return (
@@ -16,6 +17,7 @@ const App = () => {
                     <Route path="/register" element={<Register />} />
                     <Route path="/menu" element={<Menu />} />
                     <Route path="/UserForm" element={<UserForm />} />
+                    <Route path="/CreditForm" element={<CreditForm />} />
 
                 </Routes>
             </div>

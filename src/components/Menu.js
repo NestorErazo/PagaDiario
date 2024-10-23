@@ -16,13 +16,14 @@ const Menu = () => {
                           <FaUser className='icon' />
                     </li>
                     <li>
-                        <Link to="/loan-management">Gestión de Préstamos</Link>
+                        <Link to="/CreditForm">Gestión de Préstamos</Link>
                         <FcMoneyTransfer   />
                     </li>
                     <li>
                         <Link to="/dashboard">Panel de Control</Link>
                         <FaSolarPanel      className='icon'/>
                     </li>
+                  
                 </ul>
             </nav>
         </div>

@@ -1,0 +1,56 @@
+.credit-form-container {
+  max-width: 600px; /* Máxima anchura del formulario */
+  margin: 0 auto; /* Centra el formulario */
+  padding: 40px; /* Espacio interno */
+  border: 10px solid #ccc; /* Borde ligero */
+  border-radius: 20px; /* Bordes redondeados */
+  background-color: #f9f9f9; /* Color de fondo */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+h2 {
+  text-align: center; /* Centra el título */
+  color: #0e0e0e; /* Color del texto */
+}
+
+.credit-form {
+  display: flexbox; /* Usa flexbox */
+  flex-direction: column; /* Coloca los elementos en columna */
+}
+
+label {
+  margin: 10px 0; /* Espaciado entre las etiquetas */
+  font-weight: bold; /* Resalta las etiquetas */
+}
+
+.select-user,
+.input-field {
+  padding: 8px; /* Espaciado interno */
+  margin-top: 5px; /* Espacio entre la etiqueta y el campo */
+  border: 1px solid #ccc; /* Borde ligero */
+  border-radius: 4px; /* Bordes redondeados */
+  font-size: 14px; /* Tamaño de fuente */
+}
+
+.user-details {
+  margin-top: 15px; /* Espaciado superior */
+  padding: 10px; /* Espaciado interno */
+  background-color: #e9f7ef; /* Color de fondo claro */
+  border: 1px solid #b2ebf2; /* Borde claro */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.submit-button {
+  margin-top: 20px; /* Espacio superior */
+  padding: 10px; /* Espaciado interno */
+  background-color: #4CAF50; /* Color de fondo del botón */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  font-size: 16px; /* Tamaño de fuente */
+}
+
+.submit-button:hover {
+  background-color: #45a049; /* Color al pasar el mouse */
+}
