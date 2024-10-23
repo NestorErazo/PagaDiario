@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import './CreditForm.css'; 
 
 const CreditForm = () => {
@@ -7,6 +8,7 @@ const CreditForm = () => {
     const [selectedUser, setSelectedUser] = useState(null);
     const [loanAmount, setLoanAmount] = useState('');
     const [interestRate, setInterestRate] = useState('');
+    const navigate = useNavigate(); // Hook para la navegación
 
     useEffect(() => {
         const fetchUsers = async () => {
@@ -45,6 +47,11 @@ const CreditForm = () => {
             alert('Error al añadir el crédito');
         }
     };
+
+    const handleBack = () => {
+      // eslint-disable-next-line no-undef
+      navigate(-1); // Navega a la página anterior
+  };
 
     return (
         <div className="credit-form-container">
@@ -92,8 +99,9 @@ const CreditForm = () => {
                         className="input-field"
                     />
                 </label>
-
+                <br/>
                 <button type="submit" className="submit-button">Agregar Crédito</button>
+                <button type="button" onClick={handleBack} className="back-button">Volver atrás</button>
             </form>
         </div>
     );
