@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import './CreditForm.css'; 
+import './CreditForm.css';
 
 const CreditForm = () => {
     const [users, setUsers] = useState([]);
     const [selectedUser, setSelectedUser] = useState(null);
     const [loanAmount, setLoanAmount] = useState('');
     const [interestRate, setInterestRate] = useState('');
-    const navigate = useNavigate(); // Hook para la navegación
+    const [installments, setInstallments] = useState(''); // Nuevo campo para las cuotas
+    const navigate = useNavigate(); 
 
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await axios.get('https://app-bakend.onrender.com/api/user'); // Cambia esta ruta según tu API
+                const response = await axios.get('https://app-bakend.onrender.com/api/user');
                 setUsers(response.data);
             } catch (error) {
                 console.error('Error fetching users:', error);
@@ -31,7 +32,7 @@ const CreditForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (!selectedUser || !loanAmount || !interestRate) {
+        if (!selectedUser || !loanAmount || !interestRate || !installments) {
             alert('Faltan campos requeridos');
             return;
         }
@@ -40,6 +41,8 @@ const CreditForm = () => {
             const response = await axios.post(`https://app-bakend.onrender.com/api/credit/${selectedUser.identificationNumber}/add-credit`, {
                 loanAmount: parseFloat(loanAmount),
                 interestRate: parseFloat(interestRate),
+                installments: parseInt(installments), // Nuevo campo para enviar las cuotas
+
             });
             alert(response.data.message);
         } catch (error) {
@@ -49,9 +52,8 @@ const CreditForm = () => {
     };
 
     const handleBack = () => {
-      // eslint-disable-next-line no-undef
-      navigate(-1); // Navega a la página anterior
-  };
+        navigate(-1); 
+    };
 
     return (
         <div className="credit-form-container">
@@ -99,6 +101,18 @@ const CreditForm = () => {
                         className="input-field"
                     />
                 </label>
+
+                <label>
+                    Cuotas:
+                    <input
+                        type="number"
+                        value={installments}
+                        onChange={(e) => setInstallments(e.target.value)}
+                        required
+                        className="input-field"
+                    />
+                </label>
+
                 <br/>
                 <button type="submit" className="submit-button">Agregar Crédito</button>
                 <button type="button" onClick={handleBack} className="back-button">Volver atrás</button>

@@ -90,7 +90,7 @@ const UserForm = () => {
                     <label htmlFor="phone">Teléfono</label>
                     <br />
                     <input
-                        type="text"
+                        type="number"
                         id="phone"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
