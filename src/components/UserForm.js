@@ -78,7 +78,7 @@ const UserForm = () => {
                     <label htmlFor="identificationNumber">Número de identificación</label>
                     <br />
                     <input
-                        type="text"
+                        type="number"
                         id="identificationNumber"
                         value={identificationNumber}
                         onChange={(e) => setIdentificationNumber(e.target.value)}
