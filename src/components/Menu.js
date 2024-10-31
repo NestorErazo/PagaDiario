@@ -20,7 +20,7 @@ const Menu = () => {
                         <FcMoneyTransfer   />
                     </li>
                     <li>
-                        <Link to="/dashboard">Panel de Control</Link>
+                        <Link to="/CreditDetails">Panel de Control</Link>
                         <FaSolarPanel      className='icon'/>
                     </li>
                   

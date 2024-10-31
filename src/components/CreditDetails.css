@@ -1,0 +1,67 @@
+/* frontend/src/components/CreditDetails.css */
+
+.credit-details-container {
+    max-width: 1200px; /* Ajuste del ancho máximo para cuadrículas */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f4f8;
+}
+
+.credit-info {
+    margin-top: 20px;
+}
+
+/* Contenedor de tarjetas en formato de cuadrícula */
+.credit-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 15px; /* Espacio entre las tarjetas */
+}
+
+/* Tarjetas de crédito */
+.credit-item {
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    border-radius: 15px;
+    padding: 20px;
+    color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    font-family: Arial, sans-serif;
+}
+
+.credit-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.credit-item-header {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffeb3b;
+    margin-bottom: 8px;
+}
+
+.credit-item-body {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.credit-amount, .credit-installments {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: #ffeb3b;
+    margin-top: 10px;
+    text-align: center;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}

@@ -6,6 +6,8 @@ import Register from './components/Register';
 import Menu from './components/Menu';
 import UserForm from './components/UserForm';
 import CreditForm from './components/CreditForm';
+import Manager from './components/Manager';
+import CreditDetails from './components/CreditDetails';
 
 const App = () => {
     return (
@@ -18,6 +20,8 @@ const App = () => {
                     <Route path="/menu" element={<Menu />} />
                     <Route path="/UserForm" element={<UserForm />} />
                     <Route path="/CreditForm" element={<CreditForm />} />
+                    <Route path="/Manager" element={<Manager/>} />
+                    <Route path="/CreditDetails" element={<CreditDetails/>} />
 
                 </Routes>
             </div>
