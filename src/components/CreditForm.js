@@ -10,7 +10,7 @@ const CreditForm = () => {
     const [interestRate, setInterestRate] = useState('');
     const [installments, setInstallments] = useState(''); // Nuevo campo para las cuotas
     const navigate = useNavigate(); 
-
+    
     useEffect(() => {
         const fetchUsers = async () => {
             try {
@@ -42,9 +42,13 @@ const CreditForm = () => {
                 loanAmount: parseFloat(loanAmount),
                 interestRate: parseFloat(interestRate),
                 installments: parseInt(installments), // Nuevo campo para enviar las cuotas
-
             });
             alert(response.data.message);
+            
+            // Limpiar campos después de añadir crédito
+            setLoanAmount('');
+            setInterestRate('');
+            setInstallments('');
         } catch (error) {
             console.error('Error adding credit:', error);
             alert('Error al añadir el crédito');

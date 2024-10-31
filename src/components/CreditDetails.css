@@ -1,7 +1,5 @@
-/* frontend/src/components/CreditDetails.css */
-
 .credit-details-container {
-    max-width: 1200px; /* Ajuste del ancho máximo para cuadrículas */
+    max-width: 1200px; /* Aumenta el ancho máximo para mostrar más tarjetas */
     margin: 0 auto;
     padding: 20px;
     background-color: #f0f4f8;
@@ -11,15 +9,16 @@
     margin-top: 20px;
 }
 
-/* Contenedor de tarjetas en formato de cuadrícula */
+/* Contenedor de tarjetas en formato cuadrícula */
 .credit-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en la cuadrícula */
     gap: 15px; /* Espacio entre las tarjetas */
 }
 
 /* Tarjetas de crédito */
 .credit-item {
+    flex: 1 1 calc(25% - 15px); /* Cuatro columnas, menos el espacio */
     background: linear-gradient(135deg, #4e54c8, #8f94fb);
     border-radius: 15px;
     padding: 20px;
@@ -64,4 +63,18 @@ h2, h3 {
 .error-message {
     color: red;
     font-weight: bold;
+}
+
+button {
+    background-color: #4CAF50; /* Verde */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
+button:hover {
+    background-color: #45a049; /* Color de fondo al pasar el mouse */
 }
