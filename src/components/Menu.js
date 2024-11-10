@@ -20,11 +20,11 @@ const Menu = () => {
                         <FcMoneyTransfer   />
                     </li>
                     <li>
-                        <Link to="/CreditDetails">Panel de Prestamos</Link>
+                        <Link to="/CreditDetails">Validar de Prestamos</Link>
                         <FaSolarPanel      className='icon'/>
                     </li>
                     <li>
-                        <Link to="/CreditPaymentForm">Visual Prestamos</Link>
+                        <Link to="/Manager">Panel Manager</Link>
                         <FaSolarPanel      className='icon'/>
                     </li>
                     

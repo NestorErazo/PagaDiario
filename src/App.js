@@ -9,7 +9,7 @@ import CreditForm from './components/CreditForm';
 import Manager from './components/Manager';
 import CreditDetails from './components/CreditDetails';
 import UserList from './components/UserList';
-import CreditPaymentForm from './components/CreditPaymentForm';
+
 
 
 const App = () => {
@@ -26,8 +26,7 @@ const App = () => {
                     <Route path="/Manager" element={<Manager/>} />
                     <Route path="/CreditDetails" element={<CreditDetails/>} />
                     <Route path="/UserList" element={<UserList/>} />
-                    <Route path="/CreditPaymentForm" element={<CreditPaymentForm/>} />
-
+                    
                   
 
                 </Routes>
