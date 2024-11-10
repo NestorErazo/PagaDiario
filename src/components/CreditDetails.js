@@ -93,7 +93,7 @@ const CreditDetails = () => {
                 setMessage(data.message || 'Hubo un error al realizar el abono.');
             }
         } catch (error) {
-            setMessage('Error en el servidor, por favor intente nuevamente.');
+            setMessage('Error ID del Crédito por favor ingressar ID del Crédito correcto.');
             console.error('Error:', error);
         } finally {
             setIsLoading(false);
@@ -158,7 +158,7 @@ const CreditDetails = () => {
                         value={amount}
                         onChange={(e) => setAmount(e.target.value)}
                         required
-                        min="1"
+                        min="0"
                     />
                 </div>
 
