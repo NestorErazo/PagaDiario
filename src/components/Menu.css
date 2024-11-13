@@ -88,3 +88,18 @@
         font-size: 30px; /* Tamaño de fuente para pantallas grandes */
     }
 }
+.logout-button {
+    background-color: #ff4d4d; /* Color rojo */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px; /* Espaciado superior */
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #e60000; /* Color rojo oscuro al pasar el mouse */
+}
